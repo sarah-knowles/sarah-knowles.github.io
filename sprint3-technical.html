@@ -1,18 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head><title>Sprint3-technical</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" initial-scale="1.0">
-    <link rel="stylesheet" href="styles/main.css">
-    </head>
-    <body>
-        <h1>Javascript</h1>
-      <p>An analogy to describe the differences between HTML and CSS
-        Explain control flow and loops using an example process from everyday life, for example 'waking up' or 'brushing your teeth'. (But not those ones).
-        Describe what the DOM is and an example of how you might interact with it.
-        Explain the difference between accessing data from arrays and objects.
-        Explain what functions are and why they are useful.</p>
+  <head><title>Sprint3-technical</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" initial-scale="1.0">
+  <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <h1>Javascript</h1>
+    <p>I have previously used the example of a website being like a house, where HTML is 
+      the bones (the floorboards, the gib walls, the roof). Then the interior designer shows up, aka 
+      CSS, and paints things and hangs curtains to make it look nice and feel like a home. The 
+      relationship between the two is probably still able to be thought of in the same analogy; the builder 
+      and the designer need to know a bit about what the other is doing, as in, they need to be linked.
+      But they don't need too much detail. Just some common phrases (bathroom, master bedroom, or h1, 
+      .footer-item for example). </p>  
         
-    <script src="index.js"></script> 
+    <p>A useful way to think about control flow and loops might be to imagine 
+      that you are putting shoes and socks on. The socks need to happen first 
+      (I mean, you do you, but for this example lets assume you want socks UNDER shoes..). 
+      So you need to control the flow of activities to make sure they happen in the right order, 
+      and you need 2 socks before 2 shoes. You can use a <em>for loop</em> that says 'while I have 
+      less than 2 socks on, add more socks'. Same again for the shoes. That way they happen in 
+      the correct order, the specified number of times.</p>
+    <br> 
+    <p>In  Javascript, data can be stored as an array or as an object. An array looks like this - 
+      var pets = ["dog", "cat", "pig", "monkey"]. Essentially it is a list, and can be accessed using either bracket 
+      or dot notation but I think dot notation looks cleaner. A special type of array is an object and it 
+      looks like this - var snacks = {chips: "Salt & Vinegar", chocolate: 5, lettuce: false};
+      These properties can be accessed using dot notation also.</p> 
+    <p>The difference between arrays and objects seems to come down to howe you intend to use the stored data. If you 
+      are going to need to insert more data at random points, an object looks like the way to go since it doesn't store data 
+      in any specific order, it basically throws all the items in a box, as opposed to filing them strictly like an array does.</p> 
+
+    <p>Javascript uses functions to do things, which are exactly what they sound like - some instructions for what
+      to do when certain conditions are met. They can be really basic and do a simple thing like add 2 numbers together and 
+      return a total, or they can be complex and layers deep, where they call themselves and loop (like the socks thing) 
+      for any number of iterations. A word of caution... make sure you do tell it when to stop. Otherwise your browser will 
+      eventually crash. Not gonna lie, I did this too many times.</p>
+    <br>
+    <p>The DOM is the Document Object Model, and is essentially a way to think about your webpage as it 
+      is accessed by all the languages you have used to create and manipulate it. It could be 
+      represented by a tree - the trunk is the document, and branching off that are the elements
+      of your page, then branching off from those are the blocks of text, or links, or images. Each point is
+      known as a node. Every part of this can be changed using a scripting language like Javascript. You might 
+      like to change the colour of your text after 20 seconds, or make a slideshow of pictures start after the 
+      page has loaded. You can get access to the DOM and play around with it via the right click and inspect option, 
+      or by opening Developer tools. From there you can change aspects of the locally stored copy of a page. Example; 
+      yesterday the Herald was a bit too gleeful about the Kardashians no longer being on tv. My sister was appalled. 
+      I was highly amused. Simple things!</p>
+        
+    <br>
+      <a class="footerlink" href="https://sarah-knowles.github.io/" alt="Home">Back to homepage</a>
+
+    <script src="index.js"></script>
     </body>
 </html>
