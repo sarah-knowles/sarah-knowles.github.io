@@ -31,6 +31,10 @@ hr {
   margin-bottom: 20px;
 }
 
+p {
+  margin-top: 20px;
+}
+
 ul {
   list-style-type: none;
   padding: 0 10 0 0;
@@ -89,4 +93,11 @@ a:hover {
 #footer {
   margin-top: 25px;
   text-align: center;
+}
+
+.small-list {
+  color: #6d344a;
+  font-size: 1.15rem;
+  list-style-type: disc;
+  margin-left: 15px;
 }
