@@ -1,46 +1,19 @@
+<!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width" initial-scale="1.0">
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskervilledisplay=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css" />
-  <script src="https://kit.fontawesome.com/a5b9dc1a71.js" crossorigin="anonymous"></script>
-  <link rel="icon" href="favicon.ico" />
-  <title>My blog</title>
-</head>
-
-<body>
-  <div class="welcome">
-    <h1>Welcome!</h1>
-  </div>
-
-  <hr>
-  <p><strong>This is my collection of technical and cultural blogs written during study at Dev Academy.</strong></p>
-  <h3>Technical Blogs</h3>
-  <ul>
-    <li><i class="fas fa-book-open"></i><a class="blog-title" href="sprint2-technical.html">Margins, Borders and Padding, Oh My</a></li>
-    <li><i class="fas fa-book-open"></i><a class="blog-title" href="sprint3-technical.html">Javascript</a></li>
-    <li><i class="fas fa-book-open"></i><a class="blog-title" href="sprint4-technical.html">Problem Solving</a></li>
-    <li><i class="fas fa-book-open"></i><a class="blog-title" href="sprint5-technical.html">Sprint5</a></li>
-
-  </ul>
-
-  <h3>Cultural Blogs</h3>
-  <ul>
-    <li><i class="fas fa-book-open"></i><a class="blog-title" href="sprint1-cultural.html">Identity & Values</a></li>
-    <li><i class="fas fa-book-open"></i><a class="blog-title" href="sprint2-cultural.html">Learning Plan</a></li>
-    <li><i class="fas fa-book-open"></i><a class="blog-title" href="sprint3-cultural.html">EQ vs IQ</a></li>
-    <li><i class="fas fa-book-open"></i><a class="blog-title" href="sprint4-cultural.html">Neuroplasticity & Growth Minsdet</a></li>
-    <li><i class="fas fa-book-open"></i><a class="blog-title" href="sprint5-cultural.html">Sprint5</a></li>
-
-  </ul>
-  <br>
-  <footer id="footer"><a class="footerlink" href="https://www.instagram.com/frankie_the_goodest_boi">For cute dog photos, click here</a></footer>
-  <br>
-  <footer id="footer"><a class="footerlink" href="..\sarah-knowles.github.io\minesweeper\index.html">For minesweeper, click here</a></footer>
-  <br>
-</body>
-
+  <head>
+    <title>Minesweeper</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="minesweeper.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script src="lib/tests.js"></script>
+    <script src="lib/lib.js"></script>
+    <script src="minesweeper.js"></script>
+  </head>
+  <body>
+    <div id="message"></div>
+    <div id="notes"></div>
+    <div class="board"></div>
+    <br>
+    <button name="button" onclick="reset()">Reset</button>
+  </body>
 </html>
