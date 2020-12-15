@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskervilledisplay=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="favicon.ico" />
+    <title>NPM</title>
+  </head>
+
+  <body>
+    <h1>Node Package Manger</h1>
+    <hr />
+
+    <p>
+      Like it says on the box, a command line package manager for projects that
+      use Node.js. Npm creates a package.json file that will contain some meta-type data about the project
+      (typically a name, version, description and license) and list all the
+      packages the project relies on to work, plus any packages the packages
+      rely on plus any packages those packages... Anyway...
+    </p>
+    <p>
+      The dependencies are split into 2 groups inside the package.json object;
+      devDependencies, and dependencies for production. These appear as a
+      key/value pair with the value being the version (or the range
+      of versions) that is best for this project.
+    </p>
+    <p>
+      The package.json object also includes a script property to automate the
+      repetitive tasks during development. Essentially they are just terminal
+      commands or shortcuts that allow you to write your own scripts to run
+      different modules, specifically for use in the current project. There are
+      also some built in scripts like 'npm start' which kicks off
+      whatever module is listed next to 'start' in the package.json.
+    </p>
+    <p>
+      Typically you will use the terminal to install packages, and to run npm
+      commands. See below for some useful commands.
+    </p>
+
+    <h3>Commands</h3>
+
+    <ul>
+      <li class="small-list">
+        <u>npm init</u>  Initialises a project, creates a package.json file in
+        the current directory
+      </li>
+      <li class="small-list">
+        <u>npm init --yes</u>  As above except it will not ask for the project details
+        but use default values instead.
+      </li>
+      <li class="small-list">
+        <u>npm install OR npm i <code> &lt;module&gt; </code></u>  Installs the
+        required packages, and their required packages etc to the node_modules
+        folder. Will use the most recent version unless otherwise specified.
+      </li>
+      <li class="small-list">
+        <u>npm install --save</u>  The save flag will enter the module to your
+        package.json as a dependency.
+      </li>
+      <li class="small-list">
+        <u>npm install --save-dev</u>  Saves the module and enters it in the
+        devdependencies section of your package.json. This is likely to be your
+        testing library, a local server etc, things that you need for
+        development but not while the the app is running.
+      </li>
+      <li class="small-list">
+        <u>npm install --global</u>  Installs modules globally, defaults to a
+        system directory.
+      </li>
+    </ul>
+
+    <h3>Tricks</h3>
+    <p>
+      There are a few tricks for using npm efficiently via built in features,
+      for example you can open the github repo for a package by running the 'npm
+      repo &lt;package &gt;' command.
+    </p>
+    <p>
+      Another useful command is 'npm prune' which will check your node_modules
+      folder for any modules that don't appear in your package.json, and remove
+      any you didn't manually add or --save.
+    </p>
+
+    <p>NPM is a powerful tool, and worth getting to know better.</p>
+
+    <footer id="footer">
+      <br />
+      <a class="footerlink" href="https://sarah-knowles.github.io/" alt="Home"
+        >Back to homepage</a
+      >
+    </footer>
+  </body>
+</html>
