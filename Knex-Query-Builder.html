@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskervilledisplay=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="favicon.ico" />
+    <title>Knex SQL Query Builder</title>
+  </head>
+
+  <body>
+    <h1>Knex SQL Query Builder</h1>
+    <hr />
+
+    <p>
+      Knex.js is a regularly updated, open source tool for building SQL database
+      queries in javascript. It works with multiple database libraries including
+      SQLite3, MySQL, Postgres, Oracle, MariaDB & Amazon Redshift. Knex can
+      handle async events and has a built in test suite. It is most useful in a
+      bigger app where it will help to write DRY SQL queries.
+    </p>
+    <h3>Setup</h3>
+    <p>Install knex, and your chosen SQL database (SQLite3 in my case).</p>
+    <p>Require knex into the file;</p>
+    <code> var knex = require('knex') </code>
+
+    <p>Create table</p>
+    <code
+      >knex.schema.createTable('user', (table) => { table.increments('id')
+      table.string('name') table.integer('age') })
+    </code>
+
+    <p>Drop table</p>
+    <code>knex.schema.dropTable('user', (table) </code>
+
+    <h3>Methods</h3>
+
+    <ul>
+      <li class="small-list">
+        <u>Migrate</u> - Migrations are the way to create a current version of
+        your database. If you make any changes to the schema of your database,
+        the best way to deal with this is to create a new migration. Once the
+        first migration has been run, you shuld not make changes to the schema
+        directly. Anyone else working on the same database will have their work
+        affected by your changes. Instead, create a new migration and everyone
+        using the database will be able to run all the necessary migrations to
+        get your database schema up to date.
+      </li>
+      <li class="small-list">
+        <u>Seeds</u> - Seed files allow you to populate your database with fake
+        test data that stays completely independent of your actual migration
+        files. To create a seed file, run: '$ knex seed:make seed_name'. Seed
+        files are created in the directory specified in your knexfile.js for the
+        current environment.
+      </li>
+      <li class="small-list">
+        <u>Alter table</u> - don't change the table once a migration has been
+        run, instead run a new migration
+      </li>
+      <li class="small-list"><u>Select</u> -</li>
+      <li class="small-list"><u>Update</u> -</li>
+      <li class="small-list"><u>Insert</u> -</li>
+      <li class="small-list"><u>Delete</u> -</li>
+      <li class="small-list"><u>.where</u> -</li>
+      <li class="small-list"><u>.then</u> -</li>
+    </ul>
+
+    <p>
+      If you ever need to see what SQL will be generated from a Knex query, you
+      can append .toString() to the Knex query and it will return the SQL query
+      as a string. This is very useful for debugging.
+    </p>
+
+    <h4>Possible Cons;</h4>
+    <ul>
+      <li class="small-list">
+        Knex creates a level of abstraction that is possibly only necessary for
+        dynamically generated queries
+      </li>
+      <li class="small-list">
+        Complicates the learning curve for SQL databases somewhat
+      </li>
+    </ul>
+
+    <footer id="footer">
+      <br />
+      <a class="footerlink" href="https://sarah-knowles.github.io/" alt="Home"
+        >Back to homepage</a
+      >
+    </footer>
+  </body>
+</html>
