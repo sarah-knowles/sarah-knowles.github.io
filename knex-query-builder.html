@@ -65,12 +65,13 @@
         <u>Alter table</u> - don't change the table once a migration has been
         run, instead run a new migration
       </li>
-      <li class="small-list"><u>Select</u> -</li>
-      <li class="small-list"><u>Update</u> -</li>
-      <li class="small-list"><u>Insert</u> -</li>
-      <li class="small-list"><u>Delete</u> -</li>
-      <li class="small-list"><u>.where</u> -</li>
-      <li class="small-list"><u>.then</u> -</li>
+      <li class="small-list"><u>Select</u> - Exactly what it says on the tin - a way to select the required data. <code> .select({
+        aTitle: 'a.title'</code></li>
+      <li class="small-list"><u>Update</u> - Creates an update query.</li>
+      <li class="small-list"><u>Insert</u> - Creates a new entry in the database.</li>
+      <li class="small-list"><u>Delete</u> - Deletes an entry.</li>
+      <li class="small-list"><u>.where</u> - .where supplies parameters for the query.</li>
+      <li class="small-list"><u>.then</u> - chains promises to manage the asynch flow of data</li>
     </ul>
 
     <p>
@@ -78,7 +79,19 @@
       can append .toString() to the Knex query and it will return the SQL query
       as a string. This is very useful for debugging.
     </p>
-
+    <h4>Pros;</h4>
+    <ul>
+      <li class="small-list">
+        Fast and free
+      </li>
+      <li class="small-list">
+        Similar to programming with JavaScript
+      </li>
+       <li class="small-list">
+       Migrating and seeding are easy
+      </li>
+    </ul>
+    
     <h4>Possible Cons;</h4>
     <ul>
       <li class="small-list">
